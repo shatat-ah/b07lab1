@@ -1,18 +1,25 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.PrintStream;
+import java.util.Scanner;
 
 public class Polynomial {
 
-    int n = 5;
     double[] coeff;
+    int expo;
 
     public Polynomial() {
 
         this.coeff = new double[] { 0.0 };
+        this.expo = new int[] { 0 };
 
     }
 
-    public Polynomial(double[] c) {
+    public Polynomial(double[] c, int[] e) {
 
         this.coeff = c;
+        this.expo = e;
 
     }
 
@@ -54,5 +61,15 @@ public class Polynomial {
         }
 
         return false;
+    }
+
+    public Polynomial multiply(Polynomial a) {
+
+        return new Polynomial(result);
+    }
+
+    public savetoFile(String s) {
+
+
     }
 }
